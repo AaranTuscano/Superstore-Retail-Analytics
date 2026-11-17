@@ -4,7 +4,7 @@ An end-to-end analytics project on retail sales data. It starts with a MySQL dat
 
 The goal is simple: find out where the business makes money, where it loses it, and what to do about it.
 
-🔗 **Live Streamlit app:** `(https://superstore-retail-analytics-t4xxmbjvhzbanguvwkgens.streamlit.app/)`
+🔗 **Live Streamlit app:** [Superstore Analytics · Streamlit](https://superstore-retail-analytics-t4xxmbjvhzbanguvwkgens.streamlit.app/)
 
 ---
 
@@ -228,5 +228,5 @@ SQL (MySQL) · Python · Pandas · Data Cleaning · EDA · RFM and K-Means Segme
 **Aaran Tuscano**
 MBA Business Analytics | SQL | Python | Power BI
 
-LinkedIn: `(www.linkedin.com/in/aaran-tuscano)`
+LinkedIn: [linkedin.com/in/aaran-tuscano](https://www.linkedin.com/in/aaran-tuscano)
 GitHub: [github.com/AaranTuscano](https://github.com/AaranTuscano)

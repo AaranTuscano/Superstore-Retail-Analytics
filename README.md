@@ -1,8 +1,10 @@
 # 🛒 Superstore Retail Analytics | SQL + Python + Power BI
 
-An end-to-end analytics project on retail sales data. It starts with a MySQL database and SQL analysis, moves to Python for cleaning, profitability, customer segmentation and forecasting, and finishes with a 5-page Power BI dashboard built for business users.
+An end-to-end analytics project on retail sales data. It starts with a MySQL database and SQL analysis, moves to Python for cleaning, profitability, customer segmentation and forecasting, and finishes with a 5-page Power BI dashboard built for business users. A Streamlit version of the dashboard is also hosted online.
 
 The goal is simple: find out where the business makes money, where it loses it, and what to do about it.
+
+🔗 **Live Streamlit app:** `<paste your .streamlit.app link here>`
 
 ---
 
@@ -39,6 +41,9 @@ A retail company wants to understand its sales performance, customer buying beha
                         │
                         ▼
           Power BI: 5-page interactive dashboard
+                        │
+                        ▼
+      Streamlit: same dashboard, live on the web
 ```
 
 ## ⭐ Tech Stack
@@ -53,6 +58,7 @@ A retail company wants to understand its sales performance, customer buying beha
 | Machine learning | scikit-learn (K-Means) |
 | Forecasting | statsmodels (Holt-Winters) |
 | BI tool | Power BI Desktop |
+| Web app | Streamlit, Plotly |
 | Version control | Git and GitHub |
 
 ---
@@ -60,17 +66,20 @@ A retail company wants to understand its sales performance, customer buying beha
 ## 📂 Project Structure
 
 ```
-superstore-analytics/
+Superstore-Retail-Analytics/
+│
+├── app.py                      (Streamlit dashboard)
+├── requirements.txt
+├── README.md
 │
 ├── sql/
 │   └── superstore_analysis.sql
 │
 ├── python/
-│   └── superstore_python_analysis.py
+│   └── Project_2_fixed.ipynb
 │
-├── data/
-│   ├── Sample_-_Superstore1.csv
-│   └── processed/
+├── Data/
+│   └── Processed/
 │       ├── superstore_clean.csv
 │       ├── customer_segments.csv
 │       └── forecast.csv
@@ -84,10 +93,9 @@ superstore-analytics/
 │   ├── 3_product_performance.png
 │   ├── 4_customer_segmentation.png
 │   └── 5_sales_forecast.png
-│
-├── requirements.txt
-└── README.md
 ```
+
+Note: the folder is `Data/Processed` with capital letters because GitHub (and Streamlit's Linux servers) treat folder names as case-sensitive.
 
 ---
 
@@ -166,7 +174,7 @@ Features: dynamic KPI cards, interactive slicers (Year, Region, Segment, Categor
 
 **Customer retention:** 98% of customers are repeat buyers, but 174 customers who ordered often haven't ordered in over six months. These are the win-back targets.
 
-**Forecast:** Holt-Winters predicts about $362K in sales for Jan to Jun 2018. The holdout error (MAPE) was 15.6%, so treat it as a planning guide, not an exact figure.
+**Forecast:** Holt-Winters predicts about $362K in sales for Jan to Jun 2018. The holdout error (MAPE) was about 17%, so treat it as a planning guide, not an exact figure.
 
 ---
 
@@ -183,8 +191,8 @@ Features: dynamic KPI cards, interactive slicers (Year, Region, Segment, Categor
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/<your-username>/superstore-analytics.git
-cd superstore-analytics
+git clone https://github.com/AaranTuscano/Superstore-Retail-Analytics.git
+cd Superstore-Retail-Analytics
 
 python -m venv venv
 # Windows
@@ -196,8 +204,9 @@ pip install -r requirements.txt
 ```
 
 1. Run `sql/superstore_analysis.sql` in MySQL Workbench, section by section.
-2. Run `python/superstore_python_analysis.py` cell by cell (set `CSV_PATH` to your file location).
+2. Run `python/Project_2_fixed.ipynb` cell by cell (set `CSV_PATH` to your file location). It exports the 3 processed CSVs.
 3. Open `powerbi/superstore_dashboard.pbix` in Power BI Desktop and refresh the data source path if asked.
+4. Run the Streamlit app locally with `streamlit run app.py`.
 
 > Note: never commit database passwords. Keep credentials in a local `.env` file and add it to `.gitignore`.
 
@@ -217,7 +226,6 @@ pip install -r requirements.txt
 
 ## 📋 Future Enhancements
 
-- Live Streamlit version of the dashboard
 - Publish the report to Power BI Service
 - Product-level forecasting
 - Automated data refresh from MySQL
@@ -232,4 +240,4 @@ SQL (MySQL) · Python · Pandas · Data Cleaning · EDA · RFM and K-Means Segme
 MBA Business Analytics | SQL | Python | Power BI
 
 LinkedIn: `<add your link>`
-GitHub: `<add your link>`
+GitHub: [github.com/AaranTuscano](https://github.com/AaranTuscano)
